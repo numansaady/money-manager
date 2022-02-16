@@ -14,6 +14,18 @@ function expenseTotal() {
   return expenseAmount;
 }
 
+// Get update total expense and balance
+function updateBalance() {
+  const incomeAmount = getInputValue("income");
+  const expenseAmount = expenseTotal();
+  const balanceAmount = incomeAmount - expenseAmount;
+  const totalExp = (document.getElementById("total-expense").innerText =
+    expenseAmount);
+  const balance = (document.getElementById("balance").innerText =
+    balanceAmount);
+  return balanceAmount;
+}
+
 document
   .getElementById("calculate-btn")
   .addEventListener("click", function () {});
