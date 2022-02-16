@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Money Manager</title>
+    <!-- Bootstrap CDN  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome Kits  -->
+    <script
+      src="https://kit.fontawesome.com/95b8bb353e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom Stylesheet  -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Header Area Start  -->
+    <header class="header-area py-5">
+      <div class="container">
+        <h1 class="header text-center">
+          Money Manager <i class="fas fa-file-invoice-dollar"></i>
+        </h1>
+      </div>
+    </header>
+    <!-- Header Area End  -->
+
+    <!-- Main Area Start  -->
+    <main class="mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="left-img">
+              <img src="images/image-1.jpg" class="img-fluid" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="money-manager-area mt-5 mt-md-0 text-center">
+              <div class="income-area">
+                <h3 class="title">Income</h3>
+                <table>
+                  <tr>
+                    <td>Income</td>
+                    <td>
+                      <input id="income-value" type="text" value="10000" />
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!-- /.income-area end-->
+              <div class="expense-area">
+                <h3 class="title">Expense</h3>
+                <table>
+                  <tr>
+                    <td>Food</td>
+                    <td><input type="text" value="3000" /></td>
+                  </tr>
+                  <tr>
+                    <td>Rent</td>
+                    <td><input type="text" value="2000" /></td>
+                  </tr>
+                  <tr>
+                    <td>Cloths</td>
+                    <td><input type="text" value="500" /></td>
+                  </tr>
+                </table>
+              </div>
+              <!-- /.expense-area end -->
+              <button
+                onclick="calculate()"
+                class="calc-btn btn-success rounded-3 px-4 py-1"
+              >
+                Calculate
+              </button>
+              <div class="result-area">
+                <h3 class="title">Total Expenses: <span>5500</span></h3>
+                <h3 class="title">Balance: <span>4500</span></h3>
+              </div>
+              <!-- /.result-area end -->
+              <div class="save-area">
+                <table>
+                  <tr>
+                    <td>Save</td>
+                    <td><input type="text" value="20" /></td>
+                    <td>%</td>
+                    <td>
+                      <button
+                        class="save-btn btn btn-success rounded-3 px-4 py-1"
+                      >
+                        Save
+                      </button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <!-- /.save-area end -->
+              <div class="save-remain-area">
+                <h3 class="title">Saving Amount: <span>2000</span></h3>
+                <h3 class="title">Remaining Balance: <span>2500</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Main Area End  -->
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
