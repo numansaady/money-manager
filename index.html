@@ -59,38 +59,43 @@
                 <table>
                   <tr>
                     <td>Food</td>
-                    <td><input type="text" value="3000" /></td>
+                    <td><input id="food-value" type="text" value="3000" /></td>
                   </tr>
                   <tr>
                     <td>Rent</td>
-                    <td><input type="text" value="2000" /></td>
+                    <td><input id="rent-value" type="text" value="2000" /></td>
                   </tr>
                   <tr>
                     <td>Cloths</td>
-                    <td><input type="text" value="500" /></td>
+                    <td><input id="cloth-value" type="text" value="500" /></td>
                   </tr>
                 </table>
               </div>
               <!-- /.expense-area end -->
               <button
-                onclick="calculate()"
+                id="calculate-btn"
                 class="calc-btn btn-success rounded-3 px-4 py-1"
               >
                 Calculate
               </button>
               <div class="result-area">
-                <h3 class="title">Total Expenses: <span>5500</span></h3>
-                <h3 class="title">Balance: <span>4500</span></h3>
+                <h3 class="title">
+                  Total Expenses: <span id="total-expense">5500</span>
+                </h3>
+                <h3 class="title">Balance: <span id="balance">4500</span></h3>
               </div>
               <!-- /.result-area end -->
               <div class="save-area">
                 <table>
                   <tr>
                     <td>Save</td>
-                    <td><input type="text" value="20" /></td>
+                    <td>
+                      <input id="percentage-value" type="text" value="20" />
+                    </td>
                     <td>%</td>
                     <td>
                       <button
+                        onclick="savingRemainBalance()"
                         class="save-btn btn btn-success rounded-3 px-4 py-1"
                       >
                         Save
@@ -101,16 +106,27 @@
               </div>
               <!-- /.save-area end -->
               <div class="save-remain-area">
-                <h3 class="title">Saving Amount: <span>2000</span></h3>
-                <h3 class="title">Remaining Balance: <span>2500</span></h3>
+                <h3 class="title">
+                  Saving Amount: <span id="saving-amount">2000</span>
+                </h3>
+                <h3 class="title">
+                  Remaining Balance: <span id="remain-balance">2500</span>
+                </h3>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="notify-section">
+        <p id="error-msg" class="notify">❌ Sorry! Type only number.</p>
+        <p id="success-msg" class="notify">
+          ✅ Pin Matched... Secret door is opening for you
+        </p>
+      </div>
     </main>
     <!-- Main Area End  -->
 
+    <!-- Custom JS  -->
     <script src="./js/app.js"></script>
   </body>
 </html>
