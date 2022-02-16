@@ -2,7 +2,6 @@
 function getInputValue(item) {
   const inputValue = document.getElementById(item + "-value");
   const amount = parseInt(inputValue.value);
-  inputValue.value = "";
   return amount;
 }
 
