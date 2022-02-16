@@ -2,6 +2,7 @@
 function getInputValue(item) {
   const inputValue = document.getElementById(item + "-value");
   const amount = parseInt(inputValue.value);
+  inputValue.value = "";
   return amount;
 }
 
@@ -26,6 +27,20 @@ function updateBalance() {
   return balanceAmount;
 }
 
-document
-  .getElementById("calculate-btn")
-  .addEventListener("click", function () {});
+// Get Saving Amount and Remaining balance
+function savingRemainBalance() {
+  const incomeAmount = getInputValue("income");
+  const savingPercent = getInputValue("percentage");
+  const savingAmount = incomeAmount * (savingPercent / 100);
+  const balanceAmount = updateBalance();
+  const remainBalance = balanceAmount - savingAmount;
+  const savingField = (document.getElementById("saving-amount").innerText =
+    savingAmount);
+  const remainBalanceField = (document.getElementById(
+    "remain-balance"
+  ).innerText = remainBalance);
+}
+
+document.getElementById("calculate-btn").addEventListener("click", function () {
+  updateBalance();
+});
