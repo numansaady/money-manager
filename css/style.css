@@ -3,7 +3,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   color: #3a3a3a;
   line-height: 28px;
   margin: 0;
@@ -24,13 +24,13 @@ body {
 /* Money Manager Area CSS  */
 .money-manager-area {
   background-color: rgba(84, 87, 84, 0.116);
-  padding: 10px;
+  padding: 5px;
   border-radius: 20px;
 }
 .title {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 700;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 table {
   display: flex;
@@ -63,7 +63,7 @@ input {
   color: #fff;
   text-align: center;
   margin: 0 auto;
-  background: #222436;
+  background: rgba(27, 8, 151, 0.87); /*222436 */
   margin-top: 20px;
   border-radius: 15px;
   padding: 5px 20px;
